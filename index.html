@@ -311,6 +311,67 @@ footer{border-top:1px solid var(--bd);padding:22px 52px;display:flex;justify-con
   .hero > * {
     max-width: 1200px;
     width: 100%;}
+  /* =========================
+   RESPONSIVE (paste before </style>)
+========================= */
+/* Touch devices: remove custom cursor */
+@media (hover: none) {
+  body { cursor: auto; }
+  #cur, #cur-r { display: none !important; }
+  .pc { cursor: pointer; }
+}
+/* <= 1024px (tablet) */
+@media (max-width: 1024px) {
+  nav { padding: 18px 28px; }
+  .hero { padding: 120px 28px 70px; grid-template-columns: 1fr 300px; }
+  #globe-canvas { width: 520px; height: 520px; right: -120px; }
+  .sec, .about-sec { padding: 90px 28px; }
+  .contact-sec { padding: 110px 28px; }
+  footer { padding: 22px 28px; }
+}
+/* <= 820px (mobile grande / tablet chica) */
+@media (max-width: 820px) {
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; } /* simple: ocultamos links */
+  .nav-btn { padding: 8px 14px; font-size: 11px; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 110px 20px 60px;
+    gap: 26px;
+  }
+  .hero-r { justify-content: flex-start; }
+  #globe-canvas { width: 420px; height: 420px; right: -160px; opacity: 0.18; }
+
+  .h-body { max-width: none; }
+  .h-btns { flex-wrap: wrap; }
+
+  .sec, .about-sec { padding: 80px 20px; }
+  .contact-sec { padding: 90px 20px; }
+  .proj-grid { grid-template-columns: 1fr; }
+  .pc:first-child { aspect-ratio: 16/10; }
+  .pc:not(:first-child) { aspect-ratio: 16/11; }
+.about-g { grid-template-columns: 1fr; gap: 28px; }
+footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+/* <= 480px (mobile chico) */
+@media (max-width: 480px) {
+  nav { padding: 14px 16px; }
+
+  .hero { padding: 105px 16px 55px; }
+  #globe-canvas { width: 340px; height: 340px; right: -160px; }
+
+  .photo-wrap { width: 190px; height: 190px; }
+  .photo-inner { width: 190px; height: 190px; }
+
+  .sec, .about-sec { padding: 70px 16px; }
+  .contact-sec { padding: 85px 16px; }
+  footer { padding: 20px 16px; }
+
+  .pc-info { padding: 18px 18px; }
+  .pc-num { left: 18px; }
+  .pc-arrow { top: 16px; right: 16px; }
+}
 </style>
 </head>
 <body>
