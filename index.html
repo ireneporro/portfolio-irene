@@ -304,6 +304,13 @@ footer{border-top:1px solid var(--bd);padding:22px 52px;display:flex;justify-con
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;}
 .rv.on{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.07s;}.d2{transition-delay:.14s;}.d3{transition-delay:.21s;}.d4{transition-delay:.28s;}
+/* ===== CENTER HERO ON LARGE SCREENS ONLY ===== */
+@media (min-width: 1400px) {
+  .hero {width: 100%;display: grid; justify-content: center;
+  }
+  .hero > * {
+    max-width: 1200px;
+    width: 100%;}
 </style>
 </head>
 <body>
